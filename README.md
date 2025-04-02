@@ -1,23 +1,30 @@
 # NewsletterGen Crew
 
-Welcome to the NewsletterGen Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the NewsletterGen Crew project, powered by [crewAI](https://crewai.com). This project is designed to help you set up a multi-agent AI system for generating newsletters, leveraging the powerful and flexible framework provided by crewAI. The agents collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+
+---
 
 ## Installation
 
 Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
 
-First, if you haven't already, install uv:
+### Steps to Install:
 
-```bash
-pip install uv
-```
+1. **Install UV**:
+   If you haven't already, install UV:
+   ```bash
+   pip install uv
+   ```
 
-Next, navigate to your project directory and install the dependencies:
+2. **Navigate to Project Directory**:
+   Navigate to your project directory and install the dependencies.
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
+3. **Lock Dependencies** (Optional):
+   Lock the dependencies and install them by using the CLI command:
+   ```bash
+   crewai install
+   ```
+
 ### Customizing
 
 **Add your `OPENAI_API_KEY` into the `.env` file**
