@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weekly Newsletter</title>
+    <style>
+        :root {
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --card-background-color: #ffffff;
+            --card-shadow-color: rgba(0, 0, 0, 0.1);
+            --link-color: #2980b9;
+            --goodbye-color: #7f8c8d;
+        }
+
+        body.dark {
+            --background-color: #1e1e1e;
+            --text-color: #f1f1f1;
+            --card-background-color: #2c2c2c;
+            --card-shadow-color: rgba(0, 0, 0, 0.5);
+            --link-color: #4aa3ff;
+            --goodbye-color: #aaaaaa;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: var(--card-background-color);
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px var(--card-shadow-color);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: var(--text-color);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--card-background-color);
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px var(--card-shadow-color);
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 12px var(--card-shadow-color);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .read-more {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: var(--link-color);
+        }
+
+        .read-more a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .read-more a:hover {
+            text-decoration: underline;
+        }
+
+        .goodbye {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: var(--goodbye-color);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--card-background-color);
+            color: var(--text-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 2px 8px var(--card-shadow-color);
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        }
+
+        .theme-toggle:hover {
+            box-shadow: 0px 4px 12px var(--card-shadow-color);
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <div class="container">
+        <h1>Weekly Newsletter</h1>
+        <p>your job here come get'm</p>
+        <ul>
+            <li>
+                <h2>Cardinal Health: Data Scientist, AI CoE</h2>
+                <p>Cardinal Health is seeking a Data Scientist to join their Artificial Intelligence Center of Excellence. The role involves developing AI solutions to improve patient care and operational efficiency, focusing on machine learning, generative AI, and data strategy. Candidates with 4-8 years of experience in AI/ML and a background in healthcare data are preferred.</p>
+                <p>This position reflects the broader trend of AI adoption in industries where data-driven strategies are vital.</p>
+                <div class="read-more">
+                    <p>Read more:</p>
+                    <ul>
+                        <li><a href="https://outerjoin.us/remote-jobs/data-scientist-ai-coe-at-cardinal-health">Outer Join</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h2>Manager of Data Science</h2>
+                <p>A Series D tech company seeks a Manager of Data Science with extensive experience in pricing, forecasting, and machine learning to lead a talented team. The role, primarily remote, offers a $275K base salary plus equity and bonuses, focusing on creating impactful data-driven solutions.</p>
+                <p>This high-salary position highlights the demand for skilled data science leaders in tech.</p>
+                <div class="read-more">
+                    <p>Read more:</p>
+                    <ul>
+                        <li><a href="https://www.peopleinai.com/job/manager-of-data-science">People in AI</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h2>Machine Learning Salary: A 2025 Guide</h2>
+                <p>With the AI sector booming, Coursera's latest report outlines average salaries for various machine learning roles, highlighting significant demand and growth. For instance, machine learning engineers can expect salaries over $126K, showcasing lucrative career prospects in this field.</p>
+                <p>Understanding salary expectations helps professionals in AI and ML negotiate better pay.</p>
+                <div class="read-more">
+                    <p>Read more:</p>
+                    <ul>
+                        <li><a href="https://www.coursera.org/articles/machine-learning-salary">Coursera</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h2>6 Artificial Intelligence (AI) Jobs to Consider in 2025</h2>
+                <p>The article discusses six in-demand AI job roles in India, forecasting significant growth and high salaries as the AI sector is expected to expand rapidly. Positions like AI Engineer and Machine Learning Engineer are highlighted, with average salaries around ₹10,00,000.</p>
+                <p>Understanding growth areas provides insights for job seekers.</p>
+                <div class="read-more">
+                    <p>Read more:</p>
+                    <ul>
+                        <li><a href="https://www.coursera.org/in/articles/artificial-intelligence-jobs">Coursera</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h2>Vice President Generative AI Platform at Empower</h2>
+                <p>Empower is hiring a Vice President for its Generative AI Platform, responsible for developing AI infrastructure and ensuring compliance. The role emphasizes collaboration and leadership within a remote-friendly environment, with significant responsibilities in AI technology strategy and platform development.</p>
+                <p>This position illustrates the growing importance of leadership roles within AI sectors.</p>
+                <div class="read-more">
+                    <p>Read more:</p>
+                    <ul>
+                        <li><a href="https://jobs.empower.com/job/united-states/vice-president-generative-ai-platform/42743/77061258624">Empower Jobs</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h2>How AI Changed Businesses in 2024</h2>
+                <p>A recent survey highlights how GenAI is driving business transformation, revealing that 74.8% of organizations have realized some value from AI investments. The report indicates a growing trend towards rapid AI adoption, although cultural challenges remain significant barriers.</p>
+                <p>Understanding AI's impact encourages stakeholders to adapt to changing landscapes.</p>
+                <div class="read-more">
+                    <p>Read more:</p>
+                    <ul>
+                        <li><a href="https://www.cdotrends.com/story/4375/how-ai-changed-businesses-2024">CDO Trends</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h2>Sr. Artificial Intelligence & Gen AI Engineer at Citi</h2>
+                <p>Citi is looking for a Sr. AI Engineer to develop and deploy AI and Gen AI solutions. The role offers a hands-on opportunity to shape innovative technologies in the banking sector, engaging cross-functional teams to drive value creation through machine learning technologies.</p>
+                <p>Opportunities in traditional sectors like banking show how essential AI expertise is becoming.</p>
+                <div class="read-more">
+                    <p>Read more:</p>
+                    <ul>
+                        <li><a href="https://jobs.citi.com/job/pune/sr-artificial-intelligence-and-gen-ai-engineer/287/76949824176">Citi Careers</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h2>Senior Manager of Artificial Intelligence and Machine Learning at Staples, Inc.</h2>
+                <p>Staples is hiring a Senior Manager for AI and Machine Learning to lead efforts in implementing AI solutions across their North American delivery organization. The role includes building AI models and data strategies to enhance operational efficiency and improve customer experiences.</p>
+                <p>This role represents the integration of AI into everyday operations.</p>
+                <div class="read-more">
+                    <p>Read more:</p>
+                    <ul>
+                        <li><a href="https://careers.staples.com/en/job/framingham/senior-manager-of-artificial-intelligence-and-machine-learning/44412/73344834144">Staples Careers</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <p class="goodbye">Goodbye and see you tomorrow!</p>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+        }
+    </script>
+</body>
+
+</html>

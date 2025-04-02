@@ -1,6 +1,5 @@
 import streamlit as st
-
-from newsletter_gen.crew import NewsletterGen
+from src.newsletter_gen.crew import NewsletterGen
 
 
 class NewsletterGenUI:
@@ -17,10 +16,20 @@ class NewsletterGenUI:
             "personal_message": personal_message,
             "html_template": self.load_html_template(),
         }
-        return NewsletterGen().crew().kickoff(inputs=inputs)
+        result = NewsletterGen().crew().kickoff(inputs=inputs)
+        
+        # Extract the actual HTML content from the CrewOutput object
+        if hasattr(result, 'raw_output'):
+            return result.raw_output
+        elif hasattr(result, 'final_output'):
+            return result.final_output
+        elif isinstance(result, str):
+            return result
+        else:
+            # If none of the above work, try converting to string
+            return str(result)
 
     def newsletter_generation(self):
-
         if st.session_state.generating:
             st.session_state.newsletter = self.generate_newsletter(
                 st.session_state.topic, st.session_state.personal_message
@@ -36,7 +45,6 @@ class NewsletterGenUI:
                     mime="text/html",
                 )
             st.session_state.generating = False
-
     def sidebar(self):
         with st.sidebar:
             st.title("Newsletter Generator")
@@ -48,7 +56,7 @@ class NewsletterGenUI:
                 """
             )
 
-            st.text_input("Topic", key="topic", placeholder="USA Stock Market")
+            st.text_input("Topic", key="topic", placeholder="AI and ML Market")
 
             st.text_area(
                 "Your personal message (to include at the top of the newsletter)",

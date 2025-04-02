@@ -4,39 +4,54 @@
 <head>
     <title>Weekly Newsletter</title>
     <style>
+        :root {
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --card-background-color: #ffffff;
+            --card-shadow-color: rgba(0, 0, 0, 0.1);
+            --link-color: #2980b9;
+            --goodbye-color: #7f8c8d;
+        }
+
+        body.dark {
+            --background-color: #1e1e1e;
+            --text-color: #f1f1f1;
+            --card-background-color: #2c2c2c;
+            --card-shadow-color: rgba(0, 0, 0, 0.5);
+            --link-color: #4aa3ff;
+            --goodbye-color: #aaaaaa;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .container {
             width: 80%;
-            margin: auto;
+            margin: 30px auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1,
-        h2 {
-            color: #333;
+            background-color: var(--card-background-color);
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px var(--card-shadow-color);
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
 
         h1 {
             text-align: center;
+            font-size: 2.5em;
+            color: var(--text-color);
             margin-bottom: 20px;
         }
 
-        h2 {
-            margin: 0;
-        }
-
         p {
-            color: #666;
-            line-height: 1.5;
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: var(--text-color);
         }
 
         ul {
@@ -45,17 +60,35 @@
         }
 
         li {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--card-background-color);
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px var(--card-shadow-color);
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 12px var(--card-shadow-color);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--text-color);
+            margin-bottom: 10px;
         }
 
         .read-more {
-            margin-top: 10px;
-            font-size: 14px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: var(--link-color);
         }
 
         .read-more a {
-            color: #0066cc;
+            color: var(--link-color);
             text-decoration: none;
+            font-weight: 500;
         }
 
         .read-more a:hover {
@@ -64,13 +97,33 @@
 
         .goodbye {
             text-align: center;
-            margin-top: 30px;
-            color: #666;
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: var(--goodbye-color);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--card-background-color);
+            color: var(--text-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 2px 8px var(--card-shadow-color);
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        }
+
+        .theme-toggle:hover {
+            box-shadow: 0px 4px 12px var(--card-shadow-color);
         }
     </style>
 </head>
 
-<body>
+<body class="dark">
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
     <div class="container">
         <h1><!-- TITLE OF THE DAY --></h1>
         <p><!-- PERSONAL MESSAGE --></p>
@@ -82,16 +135,22 @@
                 <div class="read-more">
                     <p>Read more:</p>
                     <ul>
-                        <li><a href="https://www.example.com"><!-- LINK 1 --></a>
-                        <li><a href="https://www.example2.com"><!-- LINK 2 --></a>
+                        <li><a href="https://www.example.com"><!-- LINK 1 --></a></li>
+                        <li><a href="https://www.example2.com"><!-- LINK 2 --></a></li>
                     </ul>
                 </div>
             </li>
 
-            <!-- ADD ALL THE OTHER NEWS ITEMS HERE USING THE SAME FORMAT AS THE EXAPLE ABOVE -->
+            <!-- ADD ALL THE OTHER NEWS ITEMS HERE USING THE SAME FORMAT AS THE EXAMPLE ABOVE -->
         </ul>
         <p class="goodbye">Goodbye and see you tomorrow!</p>
     </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+        }
+    </script>
 </body>
 
 </html>
